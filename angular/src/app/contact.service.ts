@@ -12,7 +12,7 @@ export class ContactService {
 
   //retrive contacts
   getContacts(){
-    let url = "http://localhost:3000/api/contacts";
+    let url = "http://localhost:80/api/contacts";
     return this.http.get(url);
 
   }
@@ -20,12 +20,12 @@ export class ContactService {
 
   saveContact(data){
    console.warn(data)
-    return this.http.post("http://localhost:3000/api/contact",data);
+    return this.http.post("http://localhost:80/api/contact",data);
   }
 
   //delete contacts
   deleteContact(id){
-    return this.http.delete("http://localhost:3000/api/contact/"+id)
+    return this.http.delete("http://localhost:80/api/contact/"+id)
       
   
   }
